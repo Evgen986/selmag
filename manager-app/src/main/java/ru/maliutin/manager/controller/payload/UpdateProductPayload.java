@@ -1,6 +1,7 @@
 package ru.maliutin.manager.controller.payload;
 
-public record NewProductPayload (
+public record UpdateProductPayload(
         String title,
-        String details) {
+        String details){
+
 }

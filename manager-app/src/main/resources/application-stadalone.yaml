@@ -1,0 +1,29 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: manager-app
+            client-secret: uxWe9Guqddj0scI9keKGzONAPWrmQSfK
+            scope:
+              - openid
+              - view_catalogue
+              - edit_catalogue
+              - microprofile-jwt
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8082/realms/selmag
+            user-name-attribute: preferred_username
+  datasource:
+    url: jdbc:postgresql://localhost:5434/manager
+    username: postgres
+    password: 123
+  flyway:
+    - public
+    - manager
+selmag:
+  services:
+    catalogue:
+      uri: http://localhost:8081
+      registration-id: keycloak

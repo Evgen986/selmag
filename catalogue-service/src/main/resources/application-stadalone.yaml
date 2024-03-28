@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: catalogue-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8082/realms/selmag
+#    user:
+#      name: user
+#      password: 123
+#      roles:
+#        - SERVICE
+  datasource:
+    url: jdbc:postgresql://localhost:5433/catalogue
+    username: postgres
+    password: 123
+  flyway:
+    - public
+    - catalogue
+  jpa:
+    show-sql: on
+server:
+  port: 8081
+logging:
+  level:
+    sql: info
+
