@@ -1,4 +1,4 @@
-package ru.maliutin.manager.client;
+package ru.maliutin.manager.securitu;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
